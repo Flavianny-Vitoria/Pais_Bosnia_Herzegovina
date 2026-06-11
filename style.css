@@ -159,7 +159,7 @@ body {
     font-size: 1.2rem;
 }
 #sobre {
-   background-color: var(--cor-clara);
+   background-color: var(--cor-azul);
     min-height: 100vh;
     padding: 90px 5% 0 5%;
     display: flex;
@@ -188,14 +188,14 @@ body {
 #futebol {
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
-    background-color: var(--cor-maronn)
+    background-color: var(--cor--amarelo)
 }
 #futebol h1 {
     text-align: center;
     font-size: 4rem;
     margin-bottom: 40px;
     color: var(--cor-clara);
-    font-family: var(--fonte-destaque);
+    font-family: var(--fonte-outros);
 }
 .card-container {
     display: flex;
@@ -213,7 +213,7 @@ body {
     height: 450px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-azul);
     padding: 5px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: 0.4s ease;
@@ -281,7 +281,7 @@ body {
     font-size: 4rem;
     margin-bottom: 40px;
     color: var(--cor-clara);
-    font-family: var(--fonte-destaque);
+    font-family: var(--fonte-texto);
 }
 .pontos {
     display: flex;
