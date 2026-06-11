@@ -1,0 +1,341 @@
+/*CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pinyon+Script&display=swap');
+
+/* Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cor-azul: #4040a1;
+    --cor--amarelo: #ffcc5c;
+    --cor-clara: #f5e6c8;
+    --fonte-texto: "IBM Plex Serif", serif;
+    --fonte-outros: "Cardo", serif;
+}
+a {
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--fonte-texto);
+    background-color: #10082a;
+}
+/* Header Cabeçalho*/
+.cabecalho {
+    background-color: var(--cor-azul);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+.logo-title {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    color: var(--cor-clara);
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.logo-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
+    transform: skewX(-25deg);
+    transition: 0.10s;
+}
+
+.logo-title:hover::after {
+    left: 130%
+}
+.logo-title::before,
+.logo-title::after {
+    content: "✦";
+
+    color: #d4af37;
+
+    margin: 0 12px;
+
+    font-size: 1.2rem;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+.logo a {
+    color: var(--cor-clara);
+    font-size: 1.5rem;
+    font-family: var(--fonte-destaque);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.menu {
+    color: var(--cor-clara);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu a {
+    color: var(--cor-clara);
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.25s ease;
+}
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0%;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to right,
+            transparent,
+            var(--cor-dourada),
+            transparent);
+
+
+}
+.menu a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.menu a:hover::after {
+    width: 100%;
+}
+/*SEÇÕES*/
+#destaque {
+    min-height: 100vh;
+    padding: 120px 8% 60px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url(assets/logo.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* LINHA DECORATIVA */
+
+.linha-decorativa {
+    width: 180px;
+    height: 2px;
+    background-color: var(--cor--dourada);
+    position: relative;
+    margin-bottom: 35px;
+}
+.linha-decorativa::after {
+    content: "✦";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--cor--dourada);
+    background-color: transparent;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+#sobre {
+   background-color: var(--cor-clara);
+    min-height: 100vh;
+    padding: 90px 5% 0 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#sobre h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 20px;
+    font-family: var(--fonte-destaque);
+}
+.card-sobre-nos {
+    width: 38%;
+    text-align: left;
+}
+.card-sobre-nos p {
+    color: white;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 20px;
+}
+/*=== SEÇÃO CARDÁPIO ===*/
+#futebol {
+    min-height: 100vh;
+    padding: 130px 5% 20px 5%;
+    background-color: var(--cor-maronn)
+}
+#futebol h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: var(--cor-clara);
+    font-family: var(--fonte-destaque);
+}
+.card-container {
+    display: flex;
+    /*Alinhar os cards*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /*quebra os card*/
+    gap: 20px;
+    /*espaçamento entre os card*/
+
+}
+.card-container .card {
+    width: 250px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--cor-principal);
+    padding: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.card figure {
+    width: 238px;
+    height: 238px;
+    border-radius: 5px;
+    background-color: brown;
+    margin-bottom: 10px;
+
+}
+
+.card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.card h3 {
+
+    color: #d4af37;
+    font-size: 1, 5rem;
+    font-family: var(--fonte-outros);
+}
+
+.card p {
+    color: white;
+    margin: 0 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.card h4 {
+    color: var(--cor-clara);
+    margin: 20px 15px;
+    font-size: 1.2rem;
+}
+
+#pontos {
+    min-height: 100vh;
+    padding: 120px 8% 60px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url(assets/fundobebida.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#pontos h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: var(--cor-clara);
+    font-family: var(--fonte-destaque);
+}
+.pontos {
+    display: flex;
+    /*Alinhar os cards*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /*quebra os card*/
+    gap: 60px;
+    /*espaçamento entre os card*/
+    background-color: #ffffff00;
+}
+.card-ponto {
+    width: 250px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--cor-principal);
+    padding: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-ponto:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+.card-ponto figure {
+    width: 238px;
+    height: 238px;
+    border-radius: 5px;
+    background-color: brown;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.card-ponto figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.card-ponto h3 {
+    color: #d4af37;
+    font-size: 1, 5rem;
+    margin: 20px;
+    font-family: var(--fonte-outros);
+}
+.card-ponto p {
+    color: white;
+    margin: 0 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
