@@ -1,11 +1,12 @@
 /*CSS*/
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pinyon+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 /* Reset CSS*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 :root {
     --cor-azul: #4040a1;
@@ -13,6 +14,7 @@
     --cor-clara: #f5e6c8;
     --fonte-texto: "IBM Plex Serif", serif;
     --fonte-outros: "Cardo", serif;
+    --fonte-h1:"Croissant", serif;
 }
 a {
     text-decoration: none;
@@ -23,6 +25,10 @@ html {
 body {
     font-family: var(--fonte-texto);
     background-color: #10082a;
+}
+h1:hover{
+    transform: translateY(-10px);
+    transition: 0.3s ease;
 }
 /* Header Cabeçalho*/
 .cabecalho {
@@ -129,7 +135,7 @@ body {
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-        url(assets/logo.png);
+        url(assets/inicio.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -158,33 +164,46 @@ body {
     padding: 0 10px;
     font-size: 1.2rem;
 }
-#sobre {
-   background-color: var(--cor-azul);
+#sobre{
+    background-color: #4040a1;
     min-height: 100vh;
-    padding: 90px 5% 0 5%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 120px 5%;
+    
 }
-#sobre h1 {
+.cards-container-sobre{
+    display: flex;
+    flex-direction: row;
+}
+.imagem-sobre {
+    width: 60%;
+    text-align: center;
+}
+
+.imagem-sobre img{
+    width: 580px;
+    height: 500px;
+    border-radius: 20px;
+}
+#sobre h1{
     font-size: 4rem;
-    color: white;
-    margin-bottom: 20px;
-    font-family: var(--fonte-destaque);
+    color: var(--cor--amarelo);
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: var(--fonte-h1);
+    
 }
 .card-sobre-nos {
     width: 38%;
     text-align: left;
 }
 .card-sobre-nos p {
-    color: white;
+    color: rgb(248, 248, 248);
     font-size: 1.3rem;
     line-height: 1.4;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-/*=== SEÇÃO CARDÁPIO ===*/
+/*=== SEÇÃO FUTEBOL ===*/
 #futebol {
     min-height: 100vh;
     padding: 130px 5% 20px 5%;
@@ -194,8 +213,8 @@ body {
     text-align: center;
     font-size: 4rem;
     margin-bottom: 40px;
-    color: var(--cor-clara);
-    font-family: var(--fonte-outros);
+    color:  rgb(142, 98, 5);
+    font-family: var(--fonte-h1);
 }
 .card-container {
     display: flex;
@@ -245,7 +264,6 @@ body {
 }
 
 .card h3 {
-
     color: #d4af37;
     font-size: 1, 5rem;
     font-family: var(--fonte-outros);
@@ -267,23 +285,17 @@ body {
 #pontos {
     min-height: 100vh;
     padding: 120px 8% 60px;
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-        url(assets/fundobebida.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    background-color: #4040a1;
+
 }
 #pontos h1 {
     text-align: center;
     font-size: 4rem;
     margin-bottom: 40px;
     color: var(--cor-clara);
-    font-family: var(--fonte-texto);
+    font-family: var(--fonte-h1);
 }
-.pontos {
+.card-pontos {
     display: flex;
     /*Alinhar os cards*/
     justify-content: space-evenly;
@@ -299,7 +311,7 @@ body {
     height: 450px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: var(--cor-principal);
+    background-color: var(--cor--amarelo);
     padding: 5px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: 0.4s ease;
@@ -327,7 +339,7 @@ body {
     transition: 0.3s ease;
 }
 .card-ponto h3 {
-    color: #d4af37;
+    color: rgb(142, 98, 5);
     font-size: 1, 5rem;
     margin: 20px;
     font-family: var(--fonte-outros);
@@ -338,4 +350,17 @@ body {
     line-height: 1.5;
     flex-grow: 1;
 }
+footer {
+    background-color: var(--cor--amarelo);
+   padding: 5px 5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: rgb(142, 98, 5);
+}
+footer p{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
 
+}
